@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+         #header
+        {  
+            height:200px;
+            background-color: rgb(167, 212, 240);
+            background-image: url("/static/image/jobimg.jpg");
+
+        }
+        #middle
+        {
+            height:500px;
+            background-color: rgb(162, 145, 149);
+             
+            /*background-repeat: no-repeat;*/ 
+        }
+        
+        #footer
+        {
+            height:200px;
+            background-color: black;  
+        }
+        
+    </style>
+</head>
+<body>
+    <div id ="header">
+    <center><h1><u>User Registeration Form</h1></u></center>
+    </div><center>
+    <h2><mark>Please fill in this form to create an account...</mark></h2>
+    <div id="middle">
+    <form action="" method="post">
+       {% csrf_token %}
+    User Name: <input type="username" name="username" placeholder="Enter the User Name" required>
+    <br><br>
+    Email-id: <input type="emailid" name="emailid" placeholder="Enter email" required >
+    <br><br>
+    Password: <input type="password" name="password" placeholder="Enter password" required >
+    <br><br>
+    Mobile:  <input type="mobileno" name="mobileno" placeholder="Enter mobile number" required>
+    <br><br>
+    Location: <input type="location" name="location" placeholder="Enter the location" required><br><br>
+    
+    <input type="submit" name="btnsubmit"value="submit">
+    <br><br>
+    <h3><a href="login">Click to Login here</a></h3>
+       {{res}}
+    </form></center>
+</div>
+<div id ="footer">
+    <div class="footerpart">
+        <nav >
+        <a href="http://www.twitter.com" target="_self">
+            <img src="/static/image/twitter.jpg"
+           width="50" height="50" >
+           </a>
+        <a href="http://www.instagram.com" target="_self">
+            <img src="/static/image/insta.jpg"
+           width="50" height="50" >
+           </a>
+           <a href="http://www.gmail.com" target="_self">
+            <img src="/static/image/gmail.jpg"
+           width="50" height="50" >
+           </a>
+        </nav>
+           
+
+    </div>
+</div>
+
+</body>
+</html>

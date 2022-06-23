@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #header
+       {  
+           height:200px;
+           background-color: rgb(9, 9, 9);
+           background-image: url("/static/image/jimg.jpg");
+           
+
+       }
+       #middle
+       {
+           height:500px;
+           
+           background-color:rgb(162, 145, 149);
+           /*background-repeat: no-repeat;*/ 
+       }
+       #footer
+       {
+           height:200px;
+           background-color: rgb(9, 8, 8);  
+       }
+       
+
+   </style>
+</head>
+   
+    <title>Login Form</title>    
+       
+</head>    
+<body><center>
+    <div id="header">   
+    <h1>Client Login Form</h1>
+</div>    
+    <div id ="middle"> 
+        <h2>Log-in</h2>   
+    <form action="" method="post"> 
+        {% csrf_token %} 
+        
+        <b>Email-id:-</b> <input type="emailid" name="emailid"  placeholder="name" value="{{ucookie}}" required>    
+        <br><br>    
+        <b>Password:- </b> <input type="password" name="password"  placeholder="password" value="{{pcookie}}" required>    
+        <br><br> 
+        <input type="checkbox" name="chk" value="rem"{% if ucookie %} checked {% endif %}/>Remember me
+        <br><br>   
+        <input type="submit" name="btnsubmit"value="login">       
+        <br><br>    
+            
+        <h3><a href="clientreg">Click to Register here</a></h3>
+         </center>   
+    </form> 
+    <center>{{res}}</center>   
+</div>
+<div id ="footer">
+    <div class="footerpart">
+        <nav >
+        <a href="http://www.twitter.com" target="_self">
+            <img src="/static/image/twitter.jpg"
+           width="50" height="50" >
+           </a>
+        <a href="http://www.instagram.com" target="_self">
+            <img src="/static/image/insta.jpg"
+           width="50" height="50" >
+           </a>
+           <a href="http://www.gmail.com" target="_self">
+            <img src="/static/image/gmail.jpg"
+           width="50" height="50" >
+           </a>
+        </nav>
+           
+
+    </div>
+</div>
+
+</body>    
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        
+        {% for object  in object_list %}
+        
+        <li>{{ object.name }}</li>
+        <li>{{ object.companyname }}</li>
+        <li>{{ object.title }}</li>
+        <li>{{ object.emailid }}</li>
+        <li>{{ object.password }}</li>
+        <li>{{ object.phonenumber }}</li>
+        <li>{{ object.address }}</li>
+        <li>{{ object.city }}</li>
+        <li>{{ object.state }}</li>
+        <li>{{ object.postalcode }}</li>
+        <a href="/task/{{object.id}}/jupdate">Edit</a>
+        <a href="/task/{{object.id}}/jdelete">Delete</a>
+        <hr/>
+        {% empty %}
+        <li>No clients yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

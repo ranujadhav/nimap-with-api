@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        
+
+    </style>
+
+<body>
+    <div>
+    <form action="" method="post">
+        {% csrf_token %}
+            <table border="1">
+                <tr><th> s no.</th><th> project name</th><th>projectdiscription</th><th>projecttechnology</th></tr>
+                {% for d1 in res1 %}
+                  <tr>
+                <td>{{d1.id}}</td>   
+                  <td>{{d1.projectname}}</td>    
+                  <td>{{d1.projectdiscription}}</td>
+                  <td>{{d1.projecttechnology}}</td>
+                  
+                <td><a href="projectinsert?q={{d1.id}}">add</a></td>
+                <td><a href="assign">assign</a></td>
+                 </tr>
+                {% endfor %}
+               
+            </table>
+            
+    </form></center>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #header
+        {  
+            height:200px;
+            background-color: rgb(202, 152, 154);
+            background-image: url("/static/image/jimg.jpg");
+        }
+        #middle
+        {
+            height:500px;
+           
+           background-color:rgb(162, 145, 149); 
+        }
+       
+        #footer
+        {
+            height:200px;
+           background-color: rgb(9, 8, 8);  
+        }
+       
+    </style>
+    
+</head>
+<body>
+    <div id ="header">
+        <center><h1><mark>Add Client Detail</mark></h1></center>  
+        
+    </div>
+    <div id="middle"><center>
+        <h2> Fill the Form:-</h2>
+        <form action="clientreg" method="post">
+            {% csrf_token %}
+            Name: <input type="name" name="name" placeholder="Enter name" required/>
+            <br>
+            Company Name: <input type="companyname" name="companyname" placeholder="Enter company name" required/>
+            <br>
+            Title: <input type="title" name="title" placeholder="Enter title" required/>
+            Email-id: <input type="emailid" name="emailid" placeholder="Enter emailid" required/>
+            <br>
+            Password: <input type="password" name="password" placeholder="Enter password" required/>
+            <br>
+            Phonenumber: <input type="phonenumber" name="phonenumber" placeholder="Enter number" required/>
+            <br>
+            Address: <input type="address" name="address" placeholder="Enter address" required/>
+            <br>
+            City: <input type="city" name="city" placeholder="Enter city" required/>
+            <br>
+            State: <input type="state" name="state" placeholder="Enter state" required/>
+            <br>
+            Postal code: <input type="postalcode" name="postalcode" placeholder="Enter the pin" required/>
+            <br><br>
+            <input type="submit" name="btnsubmit" value="Register"/>
+        </form>
+        {{msg}}
+    </center>
+  
+    </div>
+    </body>
+</html>

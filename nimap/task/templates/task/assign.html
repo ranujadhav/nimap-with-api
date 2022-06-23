@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><b><a href="clientlist"><input type="submit" name="btnsubmit"value="clientlist"></a></b></h2>
+    <center><h1>Assign Project</h1>
+        <form action="assign" method="post">
+            {% csrf_token %}
+            client name:<select name="client">
+                {% for s1 in res1 %}
+                <option value="{{s1.res1}}">{{s1.name}}</option>
+            {% endfor %}
+           </select><br>
+            project:<select name="project">
+                {% for s2 in res2 %}
+                <option value="{{s2.res2}}">{{s2.projectname}}</option>
+            {% endfor %}
+            </select><br>
+            <input type="submit" name="btnsubmit"value="assign">
+           
+            
+        </form>
+
+
+</body>
+</html>
